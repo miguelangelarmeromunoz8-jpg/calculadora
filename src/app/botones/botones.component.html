@@ -2,7 +2,13 @@
   <button
     *ngFor="let btn of botones"
     (click)="presionar(btn)"
-    [class]="btn === '=' ? 'btn igual' : btn === 'C' ? 'btn limpiar' : 'btn'"
+    [ngClass]="{
+      'btn': true,
+      'igual': btn === '=',
+      'limpiar': btn === 'C',
+      'operador': btn === '+' || btn === '-' || btn === '*' || btn === '/',
+      'vacio': btn === ''
+    }"
   >
     {{ btn }}
   </button>

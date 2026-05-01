@@ -1,23 +1,24 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { Component, Output, EventEmitter } from '@angular/core';
 
-import { BotonesComponent } from './botones.component';
+@Component({
+  selector: 'app-botones',
+  templateUrl: './botones.component.html',
+  styleUrls: ['./botones.component.scss']
+})
+export class BotonesComponent {
+  @Output() botonPresionado = new EventEmitter<string>();
 
-describe('BotonesComponent', () => {
-  let component: BotonesComponent;
-  let fixture: ComponentFixture<BotonesComponent>;
+  botones: string[] = [
+    'C', '+/-', '%', '/',
+    '7', '8', '9', '*',
+    '4', '5', '6', '-',
+    '1', '2', '3', '+',
+    '0', '.', '=', ''
+  ];
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      declarations: [BotonesComponent]
-    })
-    .compileComponents();
-    
-    fixture = TestBed.createComponent(BotonesComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
-
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
-});
+  presionar(valor: string) {
+    if (valor !== '' && valor !== '+/-' && valor !== '%') {
+      this.botonPresionado.emit(valor);
+    }
+  }
+}

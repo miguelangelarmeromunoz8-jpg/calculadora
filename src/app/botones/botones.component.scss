@@ -14,13 +14,26 @@
   background: #3a3a3a;
   color: white;
   cursor: pointer;
+  transition: background 0.2s;
 }
 .btn:hover { background: #505050; }
 .igual {
   background: #ff9500;
+  color: white;
 }
 .igual:hover { background: #ffad33; }
 .limpiar {
   background: #a5a5a5;
   color: black;
+}
+.limpiar:hover { background: #c0c0c0; }
+.operador {
+  background: #555;
+  color: #ff9500;
+  font-weight: bold;
+}
+.operador:hover { background: #666; }
+.vacio {
+  background: transparent;
+  cursor: default;
 }
