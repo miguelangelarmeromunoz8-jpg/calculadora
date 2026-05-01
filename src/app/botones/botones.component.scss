@@ -1,0 +1,26 @@
+.botones-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  padding: 10px;
+  background: #2d2d2d;
+  border-radius: 0 0 10px 10px;
+}
+.btn {
+  padding: 18px;
+  font-size: 20px;
+  border: none;
+  border-radius: 8px;
+  background: #3a3a3a;
+  color: white;
+  cursor: pointer;
+}
+.btn:hover { background: #505050; }
+.igual {
+  background: #ff9500;
+}
+.igual:hover { background: #ffad33; }
+.limpiar {
+  background: #a5a5a5;
+  color: black;
+}

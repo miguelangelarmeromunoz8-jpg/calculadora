@@ -1,0 +1,9 @@
+<div class="botones-grid">
+  <button
+    *ngFor="let btn of botones"
+    (click)="presionar(btn)"
+    [class]="btn === '=' ? 'btn igual' : btn === 'C' ? 'btn limpiar' : 'btn'"
+  >
+    {{ btn }}
+  </button>
+</div>
