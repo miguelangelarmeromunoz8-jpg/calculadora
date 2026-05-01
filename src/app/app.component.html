@@ -1,4 +1,9 @@
 <div class="calculadora">
-  <app-display [expresion]="expresion" [resultado]="resultado"></app-display>
-  <app-botones (botonPresionado)="manejarBoton($event)"></app-botones>
+  <app-display 
+    [expresion]="expresion" 
+    [resultado]="resultado">
+  </app-display>
+  <app-botones 
+    (botonPresionado)="manejarBoton($event)">
+  </app-botones>
 </div>

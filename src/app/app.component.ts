@@ -10,6 +10,8 @@ export class AppComponent {
   resultado: string = '0';
 
   manejarBoton(valor: string) {
+    console.log('Botón presionado:', valor);
+    
     if (valor === 'C') {
       this.expresion = '';
       this.resultado = '0';
@@ -23,7 +25,7 @@ export class AppComponent {
         this.expresion = '';
       }
     } else {
-      this.expresion += valor;
+      this.expresion = this.expresion + valor;
       this.resultado = this.expresion;
     }
   }

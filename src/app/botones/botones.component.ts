@@ -17,6 +17,7 @@ export class BotonesComponent {
   ];
 
   presionar(valor: string) {
+    console.log('Emitiendo:', valor);
     this.botonPresionado.emit(valor);
   }
 }
